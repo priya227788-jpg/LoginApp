@@ -1,0 +1,256 @@
+
+/* ===== CYBER LAB DASHBOARD ===== */
+
+body:has(.cyber-container) {
+    display: block;
+    padding: 30px;
+}
+
+.cyber-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    color: var(--ink);
+}
+
+.cyber-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cyber-header h1 {
+    font-size: 36px;
+    color: #4cc3c9;
+    margin-bottom: 5px;
+}
+
+.cyber-header p {
+    color: var(--muted);
+}
+
+.password-lab {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 20px auto;
+}
+
+.lab-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.lab-heading h2 {
+    margin: 0;
+    font-size: 23px;
+}
+
+.lab-heading p {
+    margin: 5px 0;
+    color: var(--muted);
+}
+
+.lab-icon {
+    font-size: 40px;
+}
+
+.password-lab label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.password-input-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.password-input-box input {
+    flex: 1;
+    min-width: 0;
+}
+
+.password-input-box button {
+    width: 80px;
+    margin: 0;
+}
+
+.strength-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.strength-bar {
+    height: 12px;
+    width: 100%;
+    background: var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#strengthFill {
+    height: 100%;
+    width: 0%;
+    background: #ff4d4d;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.password-stats {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.stat-box {
+    flex: 1;
+    text-align: center;
+    background: var(--bg);
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.stat-box span {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #4cc3c9;
+}
+
+.stat-box small {
+    color: var(--muted);
+}
+
+.password-lab h3 {
+    margin-top: 25px;
+}
+
+.password-checklist {
+    list-style: none;
+    padding: 0;
+}
+
+.password-checklist li {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 7px;
+    background: var(--bg);
+    color: #e57c7c;
+}
+
+.password-checklist li.passed {
+    color: #35c98a;
+    border-left: 4px solid #35c98a;
+}
+
+.suggestion-box {
+    background: var(--bg);
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border-left: 4px solid #4cc3c9;
+}
+
+.suggestion-box h3 {
+    margin-top: 0;
+}
+
+.suggestion-box li {
+    margin-bottom: 10px;
+    color: var(--muted);
+}
+
+.password-tip {
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #16352f;
+    color: #a8e9d0;
+    line-height: 1.7;
+}
+
+.example-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px dashed var(--line);
+    border-radius: 10px;
+}
+
+.example-password {
+    font-family: Consolas, monospace;
+    font-weight: bold;
+    color: #4cc3c9;
+    overflow-wrap: anywhere;
+}
+
+.example-box small {
+    color: var(--muted);
+}
+
+.logout-button {
+    max-width: 200px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Mobile responsive layout */
+
+@media (max-width: 600px) {
+    body:has(.cyber-container) {
+        padding: 12px;
+    }
+
+    .password-lab {
+        padding: 18px;
+    }
+
+    .cyber-header h1 {
+        font-size: 28px;
+    }
+
+    .lab-heading h2 {
+        font-size: 19px;
+    }
+
+    .password-stats {
+        flex-direction: column;
+    }
+
+    .password-input-box {
+        flex-wrap: wrap;
+    }
+
+    .password-input-box button {
+        width: 70px;
+    }
+}
+/* Password checker inside Cyber Lab */
+
+#pwInput {
+    flex: 1;
+    min-width: 0;
+}
+
+#pwTips li {
+    margin-bottom: 10px;
+    color: #b8ccd6;
+}
+
+#pwStrength {
+    font-weight: bold;
+}
+
+#pwBar {
+    border-radius: 10px;
+}
+
+#toolContent .panel {
+    margin-bottom: 15px;
+}
