@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Lab Login{% endblock %}</title>
+<style>
+  :root{
+    --bg:#e9eef0; --panel:#ffffff; --ink:#14232b; --muted:#5c6f78;
+    --line:#c5d1d6; --accent:#0b6e75; --accent-ink:#ffffff; --bad:#a8321f; --badbg:#fbe9e5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f1a1f; --panel:#16252c; --ink:#e4eef1; --muted:#8fa5ae;
+           --line:#2b3f48; --accent:#4cc3c9; --accent-ink:#06191c; --bad:#ff9a86; --badbg:#3a1f1a; }
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.5 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+       display:grid;place-items:center;padding:24px}
+  .card{width:100%;max-width:400px;background:var(--panel);border:1px solid var(--line);
+        border-radius:10px;padding:32px}
+  h1{font-size:1.5rem;margin:0 0 4px;letter-spacing:-.01em}
+  p.sub{margin:0 0 24px;color:var(--muted)}
+  label{display:block;font-weight:600;font-size:.9rem;margin:16px 0 6px}
+  input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:6px;
+        background:transparent;color:var(--ink);font:inherit}
+  input:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  button{width:100%;margin-top:24px;padding:12px;border:0;border-radius:6px;cursor:pointer;
+         background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:600}
+  button:hover{filter:brightness(1.08)}
+  .err{background:var(--badbg);color:var(--bad);border-radius:6px;padding:10px 12px;margin-bottom:8px;font-size:.92rem}
+  .hint{margin-top:20px;padding-top:16px;border-top:1px dashed var(--line);font-size:.85rem;color:var(--muted)}
+  code{font-family:Consolas,Menlo,monospace}
+</style>
+</head>
+<body>{% block body %}{% endblock %}</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Sign in | Lab Portal{% endblock %}
+{% block body %}
+<main class="card">
+  <h1>Sign in</h1>
+  <p class="sub">Cyber lab portal</p>
+  {% if error %}<div class="err" role="alert">{{ error }}</div>{% endif %}
+  <form method="post" action="{{ url_for('login') }}" autocomplete="off">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <label for="username">Username</label>
+    <input id="username" name="username" required maxlength="50" autofocus>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" required maxlength="200">
+    <button type="submit">Sign in</button>
+  </form>
+  <p class="hint">Lab demo account: <code>student</code> / <code>Lab@2026!</code></p>
+</main>
+{% endblock %}
